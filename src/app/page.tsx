@@ -1,11 +1,15 @@
+import Nav from "@/app/components/nav";
 
 
 export default function Home() {
   return (
     <div>
-      <main>
-        Hello
-      </main>
+        <nav>
+            <Nav />
+        </nav>
+        <main>
+
+        </main>
     </div>
   );
 }
