@@ -12,7 +12,7 @@ const Nav = () => {
                 <div className='px-10 py-2'>
                     Movies
                 </div>
-                <div className='px-10 py-2'>
+                <div className='px-10 py-2 text-gray-400'>
                     Series
                 </div>
             </div>
