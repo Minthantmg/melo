@@ -1,4 +1,6 @@
 import Nav from "@/app/components/nav";
+import Hero from "@/app/components/hero";
+import Feature from "@/app/components/feature";
 
 
 export default function Home() {
@@ -7,8 +9,9 @@ export default function Home() {
         <nav>
             <Nav />
         </nav>
-        <main>
-
+        <main className='md:mx-10 mx-4'>
+            <Feature />
+            <Hero />
         </main>
     </div>
   );
