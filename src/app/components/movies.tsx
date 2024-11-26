@@ -1,9 +1,15 @@
+'use client'
 import React from 'react';
 import {Carousel, CarouselContent, CarouselItem} from "@/components/ui/carousel";
 import {demo_movies} from "@/type";
 import {Separator} from "@/components/ui/separator";
+import {useMovies} from "../../../hooks/useMovies";
 
 const Movies = () => {
+    const {getMoviesListHook} = useMovies()
+    const {data: moviesData} = getMoviesListHook()
+
+    console.log(moviesData)
     return (
         <div>
             <div className='mt-8 font-bold text-2xl'>
