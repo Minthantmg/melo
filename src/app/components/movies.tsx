@@ -3,6 +3,7 @@ import React from 'react';
 import {Carousel, CarouselContent, CarouselItem} from "@/components/ui/carousel";
 import {Separator} from "@/components/ui/separator";
 import {useMovies} from "../../../hooks/useMovies";
+import Link from "next/link";
 
 interface Comment {
     "username": string,
@@ -48,21 +49,25 @@ const Movies = () => {
                     <Carousel className="mt-10">
                         <CarouselContent>
                             {moviesData.map((movie: Movie, index: number) => (
-                                <CarouselItem key={index} className='md:basis-1/6 basis-1/2'>
-                                    <div className='md:h-52 rounded-3xl bg-gray-300'>
-                                    </div>
-                                    <div className='mt-4 text-md select-none'>
-                                        {movie.title}
-                                    </div>
-                                    <div className="flex h-5 items-center space-x-2 text-sm mt-2 mb-4 select-none">
-                                        <div>
-                                            {movie.rating}
-                                        </div>
-                                        <Separator orientation="vertical"/>
-                                        <div className='select-none'>
-                                            {formattedDate}
-                                        </div>
-                                    </div>
+                                <CarouselItem  key={index} className='md:basis-1/6 basis-1/2'>
+                                    <Link legacyBehavior={true} href={`/detail/${movie._id}`}>
+                                        <a>
+                                            <div className='md:h-52 rounded-3xl bg-gray-300'>
+                                            </div>
+                                            <div className='mt-4 text-md select-none'>
+                                                            {movie.title}
+                                            </div>
+                                            <div className="flex h-5 items-center space-x-2 text-sm mt-2 mb-4 select-none">
+                                                <div>
+                                                    {movie.rating}
+                                                </div>
+                                                <Separator orientation="vertical"/>
+                                                <div className='select-none'>
+                                                    {formattedDate}
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </Link>
                                 </CarouselItem>
                             ))}
                         </CarouselContent>
