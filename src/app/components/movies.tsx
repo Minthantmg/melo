@@ -49,10 +49,10 @@ const Movies = () => {
                     <Carousel className="mt-10">
                         <CarouselContent>
                             {moviesData.map((movie: Movie, index: number) => (
-                                <CarouselItem  key={index} className='md:basis-1/6 basis-1/2'>
+                                <CarouselItem  key={index} className='lg:basis-1/6 basis-1/2'>
                                     <Link legacyBehavior={true} href={`/detail/${movie._id}`}>
                                         <a>
-                                            <div className='md:h-52 rounded-3xl bg-gray-300'>
+                                            <div className='h-52 rounded-3xl bg-gray-300'>
                                             </div>
                                             <div className='mt-4 text-md select-none'>
                                                             {movie.title}
