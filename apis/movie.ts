@@ -8,3 +8,12 @@ export const getMoviesList = async () => {
         throw error;
     }
 }
+
+export const getMovieById = async (_id: string) => {
+    try {
+        const res = await axiosInstance.get(`/movie/${_id}` );
+        return res.data;
+    }catch (error) {
+        throw error;
+    }
+}
