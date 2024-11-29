@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import {getMoviesList} from "../apis/movie";
+import {getMovieById, getMoviesList} from "../apis/movie";
 
 const getMoviesListHook = () => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -9,8 +9,17 @@ const getMoviesListHook = () => {
     });
 };
 
+const getMovieByIdHook = (_id:string) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    return useQuery({
+        queryKey:["get","movie",_id],
+        queryFn:()=> getMovieById(_id)
+    })
+}
+
 export const useMovies = () =>{
     return{
-        getMoviesListHook
+        getMoviesListHook,
+        getMovieByIdHook
     }
 }
