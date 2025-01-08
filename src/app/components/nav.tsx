@@ -9,10 +9,10 @@ const Nav = () => {
                 MELO
             </div>
             <div className='hidden md:flex justify-center items-center bg-black text-white rounded-full text-sm'>
-                <div className='px-10 py-2'>
+                <div className='px-10 py-2 cursor-pointer'>
                     Movies
                 </div>
-                <div className='px-10 py-2 text-gray-400'>
+                <div className='px-10 py-2 text-gray-400 cursor-pointer'>
                     Series
                 </div>
             </div>
